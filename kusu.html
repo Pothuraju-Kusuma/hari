@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DevOps Lifecycle</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1 {
+      margin-top: 40px;
+      color: #333;
+    }
+    svg {
+      margin: 40px auto;
+      display: block;
+    }
+    .label {
+      font-size: 14px;
+      font-weight: bold;
+      fill: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>DevOps Lifecycle Diagram</h1>
+
+  <svg width="800" height="500">
+    <!-- Circular arrows -->
+    <defs>
+      <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5"
+        orient="auto-start-reverse" markerUnits="strokeWidth">
+        <path d="M0,0 L10,5 L0,10 Z" fill="#4CAF50" />
+      </marker>
+    </defs>
+
+    <!-- Stages in an infinity loop-style layout -->
+
+    <!-- Plan -->
+    <circle cx="150" cy="150" r="50" fill="#4CAF50" />
+    <text x="150" y="155" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Plan</text>
+
+    <!-- Develop -->
+    <circle cx="300" cy="100" r="50" fill="#2196F3" />
+    <text x="300" y="105" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Develop</text>
+
+    <!-- Build -->
+    <circle cx="450" cy="150" r="50" fill="#9C27B0" />
+    <text x="450" y="155" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Build</text>
+
+    <!-- Test -->
+    <circle cx="600" cy="250" r="50" fill="#FF9800" />
+    <text x="600" y="255" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Test</text>
+
+    <!-- Release -->
+    <circle cx="450" cy="350" r="50" fill="#E91E63" />
+    <text x="450" y="355" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Release</text>
+
+    <!-- Deploy -->
+    <circle cx="300" cy="400" r="50" fill="#00BCD4" />
+    <text x="300" y="405" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Deploy</text>
+
+    <!-- Operate -->
+    <circle cx="150" cy="350" r="50" fill="#8BC34A" />
+    <text x="150" y="355" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Operate</text>
+
+    <!-- Monitor -->
+    <circle cx="100" cy="250" r="50" fill="#FFC107" />
+    <text x="100" y="255" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Monitor</text>
+
+    <!-- Arrows to show the cycle -->
+    <line x1="190" y1="135" x2="260" y2="115" stroke="#4CAF50" stroke-width="3" marker-end="url(#arrow)" />
+    <line x1="340" y1="110" x2="410" y2="140" stroke="#2196F3" stroke-width="3" marker-end="url(#arrow)" />
+    <line x1="490" y1="160" x2="570" y2="230" stroke="#9C27B0" stroke-width="3" marker-end="url(#arrow)" />
+    <line x1="585" y1="295" x2="485" y2="320" stroke="#FF9800" stroke-width="3" marker-end="url(#arrow)" />
+    <line x1="410" y1="360" x2="340" y2="385" stroke="#E91E63" stroke-width="3" marker-end="url(#arrow)" />
+    <line x1="260" y1="390" x2="190" y2="340" stroke="#00BCD4" stroke-width="3" marker-end="url(#arrow)" />
+    <line x1="130" y1="310" x2="110" y2="290" stroke="#8BC34A" stroke-width="3" marker-end="url(#arrow)" />
+    <line x1="90" y1="210" x2="130" y2="170" stroke="#FFC107" stroke-width="3" marker-end="url(#arrow)" />
+  </svg>
+</body>
+</html>
